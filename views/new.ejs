@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/todo" method="POST">
+        <fieldset>
+            <legend> Create a new todo</legend>
+
+            <label>
+                Name: <input type="text" name="text" placeholder="enter a todo" />
+                
+            </label>
+            <br>
+            <label>
+                Duration: <input type="number" name="duration" />
+                
+            </label>
+            <br>
+            <label>
+                Is Complete: <input type="checkbox" name="isComplete"   />
+                
+            </label>
+        </fieldset>
+        <input type="submit" value="create new todo"/>
+    </form>
+</body>
+</html>
