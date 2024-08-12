@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href='/todo'><button>go back</button></a>
+    <form  action="/todo/<%=todo._id%>?_method=PUT" method="POST">
+        <fieldset>
+            <legend>Edit todo</legend>
+            <label>
+                Name: <input value="<%=todo.text%>" type="text" name="text" placeholder="enter a todo" />
+            </label>
+            <br>
+            <label>
+                Duration: <input  value=<%=todo.duration%> type="number" name="duration" />
+            </label>
+            <br>
+            <label>
+                Is Complete: 
+                <input
+                    type="checkbox"
+                    <%=todo.isComplete ? "checked": "" %>
+                    name="isComplete"
+                />
+            </label>
+            <input type="submit" value="edit todo" />
+        </fieldset>
+        
+
+    </form>
+    <form action="/todo/<%=todo._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete"/>
+    </form>
+</body>
+</html>

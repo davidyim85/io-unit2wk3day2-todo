@@ -11,7 +11,7 @@
     <a href='/todo/new'><button>Create new todo</button></a>
     <ul>
         <% for(t of k) {%>
-                <li><%=t.text %></li>
+            <a href="/todo/<%=t._id%>"><li><%=t.text %></li></a>
         <% } %>
     </ul>
 
